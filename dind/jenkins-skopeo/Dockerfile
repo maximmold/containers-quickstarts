@@ -25,12 +25,13 @@ RUN yum-config-manager --enable rhel-server-rhscl-7-rpms
 COPY /policy.json /etc/containers/
 
 #RUN yum install -y sudo
-RUN chmod 777 skopeo
+
 
 RUN chown -R 1001:0 $HOME && \
     chmod -R g+rw $HOME && \
     curl -L -o /usr/bin/skopeo $SKOPEO_BIN && \
     chown -R 1001:0 /etc/containers && \
     chmod -R g+rw /etc/containers
+RUN chmod 777 skopeo
 
 USER 1001
