@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/openshift3/jenkins-slave-base-centos7
 
 MAINTAINER Raffaele Spazzoli <rspazzol@redhat.com>
 
-# Labels consumed by Red Hat build service
+# Labels consumed by Red Hat build service Touch this
 LABEL com.redhat.component="jenkins-slave-skopeo-centos7" \
       name="openshift3/jenkins-slave-skopeo-centos7" \
       version="3.3" \
