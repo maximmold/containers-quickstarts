@@ -19,6 +19,8 @@ ENV SKOPEO_BIN=https://github.com/sabre1041/ocp-support-resources/blob/master/sk
 
 USER root
 
+RUN yum-config-manager --enable rhel-server-rhscl-7-rpms
+
 #COPY /skopeo /usr/bin/
 COPY /policy.json /etc/containers/
 
