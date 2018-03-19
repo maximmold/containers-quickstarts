@@ -22,6 +22,8 @@ USER root
 #COPY /skopeo /usr/bin/
 COPY /policy.json /etc/containers/
 
+RUN yum install -y sudo
+
 RUN chown -R 1001:0 $HOME && \
     chmod -R g+rw $HOME && \
     curl -L -o /usr/bin/skopeo $SKOPEO_BIN && \
