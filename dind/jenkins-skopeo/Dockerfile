@@ -14,7 +14,7 @@ LABEL com.redhat.component="jenkins-slave-skopeo-centos7" \
       io.openshift.tags="openshift,jenkins,slave,skopeo"
 
 USER root
-
+RUN yum repolist all
 ENV SKOPEO_BIN=https://github.com/sabre1041/ocp-support-resources/blob/master/skopeo/bin/skopeo?raw=true
 
 USER root
