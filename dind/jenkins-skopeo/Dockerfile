@@ -1,5 +1,5 @@
 
-FROM registry.access.redhat.com/openshift3/jenkins-slave-base-centos7
+FROM registry.access.redhat.com/openshift/jenkins-slave-base-centos7
 
 MAINTAINER Raffaele Spazzoli <rspazzol@redhat.com>
 
@@ -10,7 +10,7 @@ LABEL com.redhat.component="jenkins-slave-skopeo-centos7" \
       architecture="x86_64" \
       release="4" \
       io.k8s.display-name="Jenkins Slave Skopeo" \
-      io.k8s.description="The jenkins slave image has the skopeo tools on top of the jenkins slave base image." \
+      io.k8s.description="The jenkins slave image has the skopeo tools on top of the jenkins slave base image. Max Test" \
       io.openshift.tags="openshift,jenkins,slave,skopeo"
 
 USER root
