@@ -14,7 +14,7 @@ LABEL com.redhat.component="jenkins-slave-skopeo-centos7" \
       io.openshift.tags="openshift,jenkins,slave,skopeo"
 
 USER root
-RUN yum repolist all
+#RUN yum repolist all
 ENV SKOPEO_BIN=https://github.com/sabre1041/ocp-support-resources/blob/master/skopeo/bin/skopeo?raw=true
 
 USER root
@@ -24,7 +24,8 @@ RUN yum-config-manager --enable rhel-server-rhscl-7-rpms
 #COPY /skopeo /usr/bin/
 COPY /policy.json /etc/containers/
 
-RUN yum install -y sudo
+#RUN yum install -y sudo
+RUN chmod 777 skopeo
 
 RUN chown -R 1001:0 $HOME && \
     chmod -R g+rw $HOME && \
