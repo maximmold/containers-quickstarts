@@ -1,11 +1,11 @@
 
-FROM registry.access.redhat.com/openshift3/jenkins-slave-base-rhel7
+FROM registry.access.redhat.com/openshift3/jenkins-slave-base-centos7
 
 MAINTAINER Raffaele Spazzoli <rspazzol@redhat.com>
 
 # Labels consumed by Red Hat build service
-LABEL com.redhat.component="jenkins-slave-skopeo-rhel7" \
-      name="openshift3/jenkins-slave-skopeo-rhel7" \
+LABEL com.redhat.component="jenkins-slave-skopeo-centos7" \
+      name="openshift3/jenkins-slave-skopeo-centos7" \
       version="3.3" \
       architecture="x86_64" \
       release="4" \
@@ -14,8 +14,6 @@ LABEL com.redhat.component="jenkins-slave-skopeo-rhel7" \
       io.openshift.tags="openshift,jenkins,slave,skopeo"
 
 USER root
-
-RUN  yum reinstall centos-release
 
 ENV SKOPEO_BIN=https://github.com/sabre1041/ocp-support-resources/blob/master/skopeo/bin/skopeo?raw=true
 
