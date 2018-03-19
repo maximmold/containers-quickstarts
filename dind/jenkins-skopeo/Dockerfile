@@ -15,6 +15,8 @@ LABEL com.redhat.component="jenkins-slave-skopeo-rhel7" \
 
 USER root
 
+RUN  yum reinstall centos-release
+
 ENV SKOPEO_BIN=https://github.com/sabre1041/ocp-support-resources/blob/master/skopeo/bin/skopeo?raw=true
 
 USER root
